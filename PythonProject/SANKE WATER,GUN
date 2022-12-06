@@ -1,0 +1,50 @@
+import random
+#:- THIS GAME OF OTHER NAME:- SANKE WATER,GON OR [ROCK PAPER, SCISSORS]
+
+def gameWin(comp,you):
+    #:- IF TWO VALUE ARE EQUAL, DECLARE A TIE
+    if comp==you:
+        return None
+        #:- CHECK FOR ALL POSSIBILITIES WHEN COMPUTER CHOSE:-s
+    elif comp=='s':
+        if you=='w':
+            return False
+        elif you=='g':
+            return True
+        #:- CHECK FOR ALL POSSIBILITIES WHEN COMPUTER CHOSE:-w
+    elif comp=='w':
+        if you=='g':
+            return False
+        elif you=='s':
+            return True
+        #:- CHECK FOR ALL POSSIBILITIES WHEN COMPUTER CHOSE:-g
+    elif comp=='g':
+        if you=='s':
+            return False
+        elif you=='w':
+            return True
+            
+print ("Comp True:snake (s)water (w) gun (g):-")
+randNo = random.randint(1,3)#:- here line is type randint is functio of random so this work is program all elements peromance randiamlly/rule type so thos functions uses.
+if randNo ==1:
+    comp='s'
+elif randNo ==2:
+    comp='w'
+elif randNo ==3:
+ comp='g'
+    
+you= input("Your True: Snake 🐍 (s)Water 💧 (w) Gun 🔫 (g):-")
+a= gameWin (comp,you)
+
+print (f"🖥 Computer choose {comp}")
+print (f"You choose {you}")
+if a== None:
+    print ("The game is a tie !")
+elif a:
+    print ("Shailesh you are wan!")
+else:
+    print ("Shailesh you are loser!")
+
+
+print ('''Good boy SHAILESH all the best:-your first project is completete in python,
+According to this project just a gmae play with two mediam first you and 2nd your devoce (computer). I hope this is helpful for you.''')
