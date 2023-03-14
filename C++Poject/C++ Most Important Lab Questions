@@ -1,0 +1,576 @@
+//In this page discuss pratical lab questions all solve in c++.
+
+//Question 1. Write a C++ Program to display Names, Roll No., and grades of 3 students who have appeared 
+//in the examination. Declare the class of name,Roll No and grade.
+
+#include<iostream>
+using namespace std;
+class Students{
+	char stud_name[50];
+	int stud_roll;
+	char stud_grade[2];
+	public:
+		void read_data(int count){
+			cout<<"\n******Enter Student "<<count+1<<" Information*******"<<endl;
+			cout<<"Name of Student:";
+			cin>>stud_name;
+			cout<<"Roll Number of Student:";
+			cin>>stud_roll;
+			cout<<"Enter Student Grade(O, A+, A, B+, B, C, D, F ):";
+			cin>>stud_grade;
+			cout<<"Student Information of "<<stud_name<<" has been successfully saved"<<endl;
+			cout<<"************************************"<<endl;
+		}
+		
+		void disp_data(int count){
+			cout<<"\n******Student "<<stud_name<<" Information*****"<<endl;
+			cout<<"Name of Student:"<<stud_name<<endl;
+			cout<<"Roll of Student:"<<stud_roll<<endl;
+			cout<<"Grade of Student:"<<stud_grade<<endl;	
+		}
+};
+int main(){
+	Students obj[3];
+	int i;
+	for(i=0; i<3; i++)
+		obj[i].read_data(i);
+		
+	cout<<"\n\n +++++++++++++++++++++++++++++++++++++++++++++++\n"; 
+	cout<<"The information of 3 students has been saved."; 
+	cout<<"\n+++++++++++++++++++++++++++++++++++++++++++++++\n"; 
+	
+	for(i=0; i<3; i++)
+		obj[i].disp_data(i);
+		cout<<"Created by Shailesh"<<endl;
+	return 0;
+}
+
+
+//Question 2:- Create an array of class objects. Read and display the contents of the array.
+
+//class Student{
+//	char name[30];
+//	int marks, roll;
+//	public:
+//	void getdata(){
+//		cout<<"\t********Enter Information of Students********"<<endl;
+//		cout<<"Enter Student Name:";
+//		cin>>name;
+//		cout<<"Enter Student Marks:";
+//		cin>>marks;
+//		cout<<"Enter Student Roll:";
+//		cin>>roll;
+//		cout<<endl;	
+//	}
+//	void showdata(){
+//		cout<<"\t********Information of Students********"<<endl;
+//		cout<<"Student Name:"<<name<<endl;
+//		cout<<"Student Marks:"<<marks<<endl;
+//		cout<<"Student Roll Number"<<roll<<endl;
+//		cout<<endl;	
+//	}
+//};
+//int main(){
+//	Student s1[30];
+//	int i,n;
+//	cout<<"\nEnter Number of Students:";
+//	cin>>n;
+//	for(i=0; i<n; i++)
+//		s1[i].getdata();
+//		cout<<"\n*******Students Infromation********\n"<<endl;
+//	for(i=0; i<n; i++)
+//		s1[i].showdata();
+//		
+//		return 0;
+//}
+
+//3.	Write a C++ program to declare Struct. Initialize and display contents of member variables.
+/*
+struct name{
+	char nm[50];
+	int age;
+};
+int main(){
+	
+	cout<<"*******Enter your Personal Details******"<<endl;
+	struct name info;
+	cout<<"Enter your name:- ";
+	cin>>info.nm;
+	cout<<"Enter age:-";
+	cin>>info.age;
+		
+	cout<<"\n \n*******Your Personal Details******"<<endl;
+		cout<<"your Name:- "<< info.nm<<endl;
+		cout<<"your Age:- " <<info.age<<endl;
+		return 0;
+}
+*/
+
+struct Studentss{
+	string name;
+	int roll;
+	int marks;
+	string branch;
+};
+
+int main(){
+	struct Studentss stud1, stud2;
+	
+cout<<"\n******Enter Student 1 Information******"<<endl;
+cout<<"Enter Your Name:- ";
+cin>>stud1.name;
+cout<<"Enter Your Roll Number:-";
+cin>>stud1.roll;
+cout<<"Enter Your Marks :- ";
+cin>>stud1.marks;
+cout<<"Enter Your Branch:- ";
+cin>>stud1.branch;
+
+cout<<"\n******Enter Student 2 Information******"<<endl;
+cout<<"Enter Your Name:- ";
+cin>>stud2.name;
+cout<<"Enter Your Roll Number:-";
+cin>>stud2.roll;
+cout<<"Enter Your Marks :- ";
+cin>>stud2.marks;
+cout<<"Enter Your Branch:- ";
+cin>>stud2.branch;
+
+
+
+cout<<"\n******Student 1 Information has been Successfully Saved*****"<<endl;
+cout<<"Your Name is:- "<<stud1.name<<endl;
+cout<<"Your Roll Number is:- "<<stud1.roll<<endl;
+cout<<"Your Marks is:- "<<stud1.marks<<endl;
+cout<<"Your Branch is:- "<<stud1.branch<<endl;
+
+cout<<"\n******Student 2 Information has been Successfully Saved*****"<<endl;
+cout<<"Your Name is:- "<<stud2.name<<endl;
+cout<<"Your Roll Number is:- "<<stud2.roll<<endl;
+cout<<"Your Marks is:- "<<stud2.marks<<endl;
+cout<<"Your Branch is:- "<<stud2.branch<<endl;
+return 0;
+}
+
+//4.Write a c++ program to implement Constructors and destructor.
+
+//Example of Constructor:
+/*
+class Constructor{
+	int c;
+	public:
+		Constructor(int a, int b){
+			c=a+b;
+		}
+		void show(){
+			cout<<"Addition of a and b:"<<c<<endl;
+		}
+};
+int main(){
+	Constructor obj(5,6); 	// Normall parametrized Constr 
+	obj.show();
+	Constructor obj2=obj;
+	obj2.show();		//but this is copy Constr 
+	return 0;
+}
+*/
+
+//class Destructor{
+//	int a, b;
+//	public:
+//	 ~Destructor(){
+//	 	cout<<"Enter A value:";
+//	 	cin>>a;
+//	 	cout<<"Enter B Value:";
+//	 	cin>>b;
+//	 	cout<<"Before Swapping value a and b"<<endl;
+//	 	cout<<"A="<<a<<"\t"<<"B="<<b<<endl;
+//	 	a=a+b;
+//	 	b=a-b;
+//	 	a=a-b;
+//	 	cout<<"After Swapping Value is a and b"<<endl;
+//	 	cout<<"A="<<a<<"\t"<<"B="<<b<<endl;
+//	 }
+//};
+//int main(){
+//	Destructor d;
+//}
+/*
+//5.Write a c++ program to compare two objects using friend function.
+
+class Text{
+	private:
+	int x,y; // instance of two
+	public:
+		Text(int a, int b){
+			cout<<"Enter a number=";
+			cin>>x;
+			cout<<"Enter b number=";
+			cin>>y;
+	}
+		
+		void show(){
+			if(x>y){
+				cout<<"A is greatest with B"<<endl;
+			}
+			else{
+				cout<<"B is greatest with A"<<endl;
+			}
+			
+		}
+friend void show(Text);	
+};
+
+int main(){
+	
+	Text t1(0,0);
+	cout<<"Normal Constructor"<<endl;
+	t1.show();
+	Text t2=t1;
+	cout<<"Copy Constructor"<<endl;
+	t2.show();
+	return 0;
+}
+*/
+
+/*
+//Q5.	Write C++ program for unary increment (++) and decrement (--) operator overloading
+//Example of unary increment(++).
+
+class Unyin{
+	private:
+		int num;
+	public:
+		Unyin():
+			num(10){
+				//blanck function
+			}
+			void operator ++(){ 	// increment operator add 
+				num= num+2;
+			}
+			void print(){
+				cout<<"The Current Value : "<<num;
+			}
+};
+int main(){
+	Unyin in;
+	++in; 	// 
+	in.print(); 
+	return 0;
+}
+*/
+/*
+
+//Example of unary decrement(--).
+class Unydec{
+	private:
+		int num;
+	public:
+		Unydec(): num(10){
+				//empty function
+			}
+			void operator --(){ 	// decrement operator substraction 
+				num=num-1;
+			}
+			void print(){
+				cout<<"The Current Value : "<<num;
+			}
+};
+int main(){
+	Unydec in;
+	--in; 	// 
+	in.print(); 
+	return 0;
+}
+*/
+
+//Q6.	Implement operator overloading to add two complex numbers.
+/*
+
+class Complex{
+	public:
+	int real, img;
+	Complex(){
+		real=0;
+		img=0;
+	}
+	Complex (int r, int i){
+		real=r;
+		img=i;
+		
+//		cout<<"Enter Real Number two times"<<endl;
+//		cin>>real;
+//		cout<<"Enter Imaginerry Number two times:"<<endl;
+//		cin>>img;
+
+	}
+	Complex add(Complex c1, Complex c2){
+		Complex res;
+		res.real= c1.real + c2.real;
+		res.img= c2.img + c2.img;
+		return res;
+	}
+};
+int main(){
+	Complex c1(20, 10);
+	cout<<"Complex Number c1: "<<c1.real<<" +i"<<c1.img<<endl;
+	
+	Complex c2(30,45);
+	cout<<"Complex Number c2: "<<c2.real<<" +i"<<c2.img<<endl;
+	
+	Complex c3;
+	c3= c3.add(c1 , c2);
+	cout<<"Add of two Complex Number:"<<c3.real<<"+i"<<c3.img<<endl;
+	return 0;
+}
+*/
+
+//Q7.C++ program to demonstrate example of Copy Constructor.
+/*
+class Copy{
+	int c;
+	public:
+		Copy(int a, int b){
+			cout<<"Enter a Number:";
+			cin>>a;
+			cout<<"Enter b Number";
+			cin>>b;
+			c=a+b;
+		}
+		void disp(){
+			cout<<"Sum of a and b:"<<c<<endl; 
+		}
+};
+int main(){
+	Copy c1(0,0);
+	cout<<"Normal Constructor Value."<<endl;
+	c1.disp();
+
+	Copy c2=c1;
+	cout<<"Copy Constructor Value."<<endl;
+	c2.disp();
+	return 0;
+}
+*/
+
+//Q8.	Count the created objects using static member function in C++.
+//Static: It is a keyword refers that memory mangament in hdd and memory efficient manage 
+//because staitc means fix of value.
+//An Example For Better Understanding
+/*
+
+class Student{
+	public:
+		string name;
+		int marks,roll;
+		static int count;
+
+		void getS(){
+			cout<<"Enter Student Name:"<<endl;
+			cin>>name;
+			cout<<"Enter Student Roll Number:"<<endl;
+			cin>>roll;
+			cout<<"Enter Student Marks:"<<endl;		
+			cin>>marks;
+		}
+		void showS(){
+			cout<<"Student Name is :"<<name<<endl;
+			cout<<"Student Roll is :"<<roll<<endl;
+			cout<<"Student Marks is :"<<marks<<endl;
+		}
+		Student(){
+			count++;
+		}	
+};
+int Student::count=0;
+int main(){
+	static Student s1,s2,s3;
+	s1.getS();
+	s1.showS();
+	cout<<"Number of Object is:"<<Student::count;
+return 0;
+}
+*/
+
+
+//Same Program but using this keyword 
+//class Stud{
+//	public:
+//	string name;
+//	int roll, marks;
+//	static string  branch;
+//	Stud(string name, int roll, int marks){
+//		this->name=name;
+//		this->roll=roll;
+//		this->marks=marks;
+//	}
+//	void disp(){
+//		
+//		cout<<"Student Information : "<<"Name of Student:-"<<name<<"\t "<<"Roll Number of Student:-"<<roll<< "\t"<<"Marks of Student:-"<<marks<<"\t"<<"and Branch Name:-"<<branch<<endl;
+//	}
+//	
+//};
+//string Stud::branch="BCA";
+//int main(){
+//	Stud s1("Shailesh",85205, 456);
+//	Stud s2("Annu ",85555,468);
+//	s2.disp();
+//	s1.disp();
+//		return 0;
+//}
+
+//Q9.	Write code to implement dynamic polymorphism.
+//Polymorphism:- It means that one man many name.
+//Dynamic polymorphism also known as runtime poymorphism or late-banding poymorphism:-
+// In this case same name as funtion name and function arguments
+/*
+//An Example of dynamic poymorphism:
+
+class Base{
+	public :
+		int a,b, c;
+		void add(){
+			a=10;
+			b=20;
+			c=a+b;
+			cout<<"Addition value of a and b(Base Class): " <<c<<endl;
+		}
+};
+
+class Derived: public Base{
+	public :
+		int c,a,b;
+		void add(){
+			a=10;
+			b=5;
+			c=a+b;
+			cout<<"Addition value of a and b (Derived Class):" <<c<<endl;
+		}
+};
+int main(){
+	Base *b; 		// Base class of Pointer 
+	Derived d; 		//Derived class of object
+	b=&d; 		// base class object access derived objects
+	b->add(); 		// call base class functions
+	
+	// If you print both class value then create two object
+	
+//	Base b;
+//	Derived d;
+//	b.add();
+//	d.add();
+
+	return 0;
+}
+*/
+
+//10.	Create function template to perform addition for two different numbers.
+
+//template:- It is a generic programming methods in c++,
+//Generic program means:- It means that which type of function pass in the functions or class then execute these type of program./
+
+//Let's see an example of function template find add program.'
+/*
+Just Demo: ---
+template <class T>
+void add(T a , T b){
+	cout<<"Addition ="<<a+b<<endl;
+}
+int main(){
+	add(3,5);
+	return 0;
+}
+*/
+
+/*
+
+template < class T1, class T2>
+class Temp{
+	T1 a;
+	T2 b;
+	public :
+		Temp(T1 x, T2 y){
+			a=x;
+			b=y;
+		}
+		void show(){
+			cout<<"\n \n*********INTEGER TYPE VALUE**********"<<endl;
+			cout<<"Addition of a and b= "<<a+b<<endl;
+			cout<<"Substraction of a and b= "<<a-b<<endl;
+		}
+		void anot(){
+			cout<<"\n \n*********FLOAT TYPE VALUE**********"<<endl;
+			cout<<"Addition of a and b= "<<a+b<<endl;
+			cout<<"Substraction of a and b= "<<a-b<<endl;
+		}
+};
+int main(){
+	Temp< int, int > t1(5,2);
+	Temp< float, float > t2(7.2, 8.1);
+	t1.show();
+	t2.anot();
+	return 0;
+}
+*/
+
+//11.Write code to store roll and name of student in a file and  print back.
+//File Handlig Process finds this problem.
+
+//Data Type	Description
+//fstream	It is used to create files, write information to files, and read information from files.
+//ifstream	It is used to read information from files.
+//ofstream	It is used to create files and write information to the files.
+
+//Example 1: Write Students details in a file then show just now.
+/*
+
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+	int roll;
+	int marks;
+	string name;
+	string branch;
+	ofstream file("Demo.txt");
+	if(file.is_open())
+	{
+		cout<<"\n********Please Input Your Vailed Information Because you are a Student*******"<<endl;
+		cout<<"Enter Your Full Name : ";
+		getline(cin, name);
+		cout<<"Enter Your Roll Number:";
+		cin>>roll;
+		cout<<"Enter Your Marks: ";
+		cin>>marks;
+		cout<<"Enter Your Branch: ";
+		cin>>branch;
+		
+		file<<"You are Student of the 2nd year your details:- "<<endl;
+		file<<"Your Full Name is: "<<name<<endl;
+		file<<"Your Roll Number is: "<<roll<<endl;
+		file<<"Your Marks is: "<<marks<<endl;
+		file<<"Your Branch Name: "<<branch<<endl;
+		
+		file.close();
+		
+		cout<<("\n********File Create and Write Details of Students is Process Done!******")<<endl;
+	}
+	else{
+		
+		cout<<"File Openning Process failed!"<<endl;
+	}
+	
+	ifstream is;
+	string line;
+	is.open("Demo.txt");
+	cout<<"\n*******File(Demo.txt) Read Of Students Infromations Show*****\n"<<endl;
+	while(getline(is,line)){
+		cout<<line<<endl;
+	}
+	is.close();
+	return 0;
+}
+*/
+
+//Finally Done all Question
