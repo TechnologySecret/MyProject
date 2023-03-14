@@ -1,0 +1,47 @@
+//In this page discuss pratical lab questions all solve in c++.
+
+//Question 1. Write a C++ Program to display Names, Roll No., and grades of 3 students who have appeared 
+//in the examination. Declare the class of name,Roll No and grade.
+
+#include<iostream>
+using namespace std;
+class Students{
+	char stud_name[50];
+	int stud_roll;
+	char stud_grade[2];
+	public:
+		void read_data(int count){
+			cout<<"\n******Enter Student "<<count+1<<" Information*******"<<endl;
+			cout<<"Name of Student:";
+			cin>>stud_name;
+			cout<<"Roll Number of Student:";
+			cin>>stud_roll;
+			cout<<"Enter Student Grade(O, A+, A, B+, B, C, D, F ):";
+			cin>>stud_grade;
+			cout<<"Student Information of "<<stud_name<<" has been successfully saved"<<endl;
+			cout<<"************************************"<<endl;
+		}
+		
+		void disp_data(int count){
+			cout<<"\n******Student "<<stud_name<<" Information*****"<<endl;
+			cout<<"Name of Student:"<<stud_name<<endl;
+			cout<<"Roll of Student:"<<stud_roll<<endl;
+			cout<<"Grade of Student:"<<stud_grade<<endl;	
+		}
+};
+int main(){
+	Students obj[3];
+	int i;
+	for(i=0; i<3; i++)
+		obj[i].read_data(i);
+		
+	cout<<"\n\n +++++++++++++++++++++++++++++++++++++++++++++++\n"; 
+	cout<<"The information of 3 students has been saved."; 
+	cout<<"\n+++++++++++++++++++++++++++++++++++++++++++++++\n"; 
+	
+	for(i=0; i<3; i++)
+		obj[i].disp_data(i);
+		cout<<"Created by Shailesh"<<endl;
+	return 0;
+}
+
