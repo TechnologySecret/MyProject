@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game</title>
+    <style>
+    * {
+        margin: 0%;
+    }
+
+    .main {
+        width: 500px;
+        height: 500px;
+        margin: 40px auto;
+        border: 3px solid black;
+    }
+
+    .row-big {
+        width: 500px;
+        height: 190px;
+    }
+
+    .row {
+        width: 500px;
+        height: 120px;
+    }
+
+    .col-big {
+        width: 190px;
+        height: 190px;
+        float: left;
+        background: rgb(235, 14, 14);
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .col {
+        width: 120px;
+        height: 190px;
+        float: left;
+    }
+
+    .col-bet {
+        width: 190px;
+        height: 120px;
+        float: left;
+        border: 2px solid black;
+        box-sizing: border-box;
+        transform: translateX(270deg);
+    }
+
+    .col-square {
+        width: 0px;
+        height: 0px;
+        float: left;
+        background: blue;
+        border-left: 60px solid rgb(235, 14, 14);
+        border-right: 60px solid rgb(235, 235, 18);
+        border-bottom: 60px solid rgb(0, 191, 255);
+        border-top: 60px solid lightgreen;
+    }
+
+    .col-sm {
+        height: 190px;
+        width: 40px;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .row-ver {
+        width: 40px;
+        height: 31.3px;
+        box-sizing: border-box;
+        border-bottom: 1px solid black;
+    }
+
+    .row-horizontal {
+        width: 31px;
+        height: 120px;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .col-horizontal {
+        width: 31px;
+        height: 40px;
+        box-sizing: border-box;
+        margin: 0%;
+        border-bottom: 1px solid black;
+    }
+
+    .box {
+        width: 130px;
+        height: 130px;
+        background: white;
+        border-radius: 25px;
+        margin: 30px 30px;
+        transform: rotate(45deg);
+        position: relative;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .gitti {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .arrow-green,
+    .arrow-blue,
+    .arrow-red,
+    .arrow-yellow {
+        border: 15px solid transparent;
+        border-top: 0;
+        border-right-color: transparent;
+        border-bottom-color: red;
+        border-left-color: transparent;
+        display: block;
+        width: 0px;
+        height: 0px;
+    }
+
+    .arrow-blue {
+        padding-top: 9px;
+        margin-left: 4px;
+        border-bottom-color: rgb(0, 191, 255);
+    }
+
+    .arrow-green {
+        border-bottom-color: lightgreen;
+        transform: rotate(180deg);
+        margin-top: 8px;
+        padding-bottom: 9px;
+        margin-left: 4px;
+    }
+
+    .arrow-red {
+        transform: rotate(90deg);
+        position: absolute;
+        top: 12px;
+    }
+
+    .arrow-yellow {
+        transform: rotate(-90deg);
+        position: absolute;
+        border-bottom-color: rgb(222, 226, 1);
+        top: 11.5px;
+        right: 3px;
+    }
+
+    .right {
+        right: 20px;
+    }
+
+    .bottom-l {
+        bottom: 20px;
+    }
+
+    .bottom {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .gr {
+        background: lightgreen;
+    }
+
+    .bl {
+        background: rgb(0, 191, 255);
+    }
+
+    .rd {
+        background: rgb(235, 14, 14);
+    }
+
+    .yl {
+        background: rgb(235, 235, 18);
+    }
+    h1{
+        background-color: blue;
+    }
+    h3{
+        background-color: green;
+        
+    }
+    </style>
+</head>
+<body> 
+    <br>
+    <h1 align="center"><mark>Created By Shailesh_J</mark> </h1><br>
+    <h3 align="center">
+        1st Player Shailesh_J<br>
+        2nd Player Ravi <br>
+        3rd Player Raj <br>
+        4th Player Annu <br>
+    </h3>
+
+    <div class="main">
+        <div class="row-big">
+            <div class="col-big">
+                <div class="box">
+                    <div class="gitti rd"></div>
+                    <div class="gitti rd right"></div>
+                    <div class="gitti rd bottom"></div>
+                    <div class="gitti rd bottom-l"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-sm">
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                </div>
+                <div class="col-sm">
+                    <div class="row-ver arrow-green"></div>
+                    <div class="row-ver gr"></div>
+                    <div class="row-ver gr"></div>
+                    <div class="row-ver gr"></div>
+                    <div class="row-ver gr"></div>
+                    <div class="row-ver gr"></div>
+                </div>
+                <div class="col-sm">
+                    <div class="row-ver"></div>
+                    <div class="row-ver gr"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                </div>
+            </div>
+            <div class="col-big" style="background: lightgreen;">
+                <div class="box">
+                    <div class="gitti gr"></div>
+                    <div class="gitti gr right"></div>
+                    <div class="gitti gr bottom"></div>
+                    <div class="gitti gr bottom-l"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-bet">
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal" style="position: relative;">
+                        <div class="arrow-red"></div>
+                    </div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal rd"></div>
+                    <div class="col-horizontal rd"></div>
+                    <div class="col-horizontal "></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal rd"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal rd"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal rd"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal rd"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+    
+            </div>
+    
+            <div class="col-square"></div>
+            <div class="col-bet">
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal yl"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal yl"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal yl"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal yl"></div>
+                    <div class="col-horizontal"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal yl"></div>
+                    <div class="col-horizontal yl"></div>
+                </div>
+                <div class="row-horizontal">
+                    <div class="col-horizontal"></div>
+                    <div class="col-horizontal" style="position: relative;">
+                        <div class="arrow-yellow"></div>
+                    </div>
+                    <div class="col-horizontal"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row-big">
+            <div class="col-big" style="background:rgb(0, 191, 255);">
+                <div class="box">
+                    <div class="gitti bl"></div>
+                    <div class="gitti bl right"></div>
+                    <div class="gitti bl bottom"></div>
+                    <div class="gitti bl bottom-l"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-sm">
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver "></div>
+                    <div class="row-ver bl"></div>
+                    <div class="row-ver"></div>
+                </div>
+                <div class="col-sm">
+                    <div class="row-ver bl"></div>
+                    <div class="row-ver bl"></div>
+                    <div class="row-ver bl"></div>
+                    <div class="row-ver bl"></div>
+                    <div class="row-ver bl"></div>
+                    <div class="row-ver arrow-blue"></div>
+                </div>
+                <div class="col-sm">
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                    <div class="row-ver"></div>
+                </div>
+            </div>
+            <div class="col-big" style=" background: rgb(235, 235, 18);">
+                <div class="box">
+                    <div class="gitti yl"></div>
+                    <div class="gitti yl right"></div>
+                    <div class="gitti yl bottom"></div>
+                    <div class="gitti yl bottom-l"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
