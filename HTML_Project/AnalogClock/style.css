@@ -1,0 +1,76 @@
+/* Basic CSS Worked */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+
+/* Worked on body Part */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(22, 16, 16);
+}
+/* Coustomised the CSS Container part*/
+.container{
+    position: relative;
+}
+
+/* Set Clock Background Color */
+
+.clock{
+    width:300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(47, 47, 40, 0.99);
+    border: 10px solid rgb(61, 215, 215);
+    box-shadow: 0px 0px 30px rgb(19, 19, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center; /*use under the clock number in the watch */     
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*  Now Create a Hands of clock */
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
