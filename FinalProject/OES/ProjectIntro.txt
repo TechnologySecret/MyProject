@@ -1,1 +1,12 @@
+These days, Online examination system is a web-based examination system where examinations are given online. either through the internet or intranet using computer system. The main goal of this online examination system is to effectively evaluate the student thoroughly through a totally automated system that not only reduce the required time but also obtain fast and accurate results.
+The online examination system is an electronic application. This framework will help the college/institution to access the inquiry  have different alternatives with one right reply. These days Online Examination System is considered a fast-developing examination method because of its speed, accuracy and also because of pandemic(covID19). Virtually all organizations today, are managing their exams by online examination system, meanwhile it reduces student's time in examinations. It is also needed less manpower to handle the examination. Therefore, of this, the result is calculated in less time. It also helps diminishing the need for paper. Online examination project in PHP is very beneficial to learn it, according to today’s requirement Online examination system is significantly important to the educational institution to prepare the exams,  saving the time and effort that is required to check the exam papers and to prepare the results reports. Online examination system helps the educational institutions to monitor their students and keep eyes
 
+
+
+on their progress. The best use of this system in Academic Institute like school, college and training centers because it helps in managing the exams and get the results in easy and an efficient manner.
+ 
+Online examination will diminish the rushed occupation of estimating the answers given by the applicants physically.
+Being a coordinated online examination framework, it will decrease paper work.
+To permit workforce to make exams and answer key.
+To permit programmed reviewing and manual evaluating which can be recorded per test.
+Responses by the candidates will be checked automatically. It reduces time consumption.
