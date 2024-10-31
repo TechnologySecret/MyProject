@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #1a1a1a, #0d0d0d, #000);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.main-content {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #eae7db;
+    text-shadow: 0 0 25px #f18a0c, 0 0 25px #ff4500;
+    position: relative;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #9e9584;
+    text-shadow: 0 0 8px #ff4500;
+}
+
+
+.heading img,
+.content img {
+    width: 80px;
+    height: auto;
+}
+
+.diyas {
+    margin-top: 20px;
+    width: 150px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px #ff8c00, 0 0 25px #ff4500;
+    }
+    100% {
+        text-shadow: 0 0 25px #ffd700, 0 0 40px #ff8c00;
+    }
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Blinking light effect */
+.light {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ff0;
+    opacity: 0.8;
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
